@@ -2917,6 +2917,7 @@
         "macros_add": [
             "STM32H747xx",
             "MBED_TICKLESS",
+            "CM4_BOOT_BY_APPLICATION",
             "EXTRA_IDLE_STACK_REQUIRED"
         ],
         "overrides": { "lpticker_delay_ticks": 4 },
