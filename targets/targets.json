@@ -2911,7 +2911,10 @@
         "components_add": [
             "QSPIF"
         ],
-        "features": ["LWIP"],
+        "extra_labels_add": [
+            "CORDIO"
+        ],
+        "features": ["LWIP", "BLE"],
         "device_has_add": [
             "USBDEVICE",
             "FLASH",
