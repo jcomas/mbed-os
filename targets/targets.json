@@ -2918,6 +2918,7 @@
             "STM32H747xx",
             "MBED_TICKLESS",
             "CM4_BOOT_BY_APPLICATION",
+            "QSPI_NO_SAMPLE_SHIFT",
             "EXTRA_IDLE_STACK_REQUIRED"
         ],
         "overrides": { "lpticker_delay_ticks": 4 },
