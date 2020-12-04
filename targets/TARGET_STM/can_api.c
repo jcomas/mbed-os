@@ -289,8 +289,9 @@ int can_frequency(can_t *obj, int f)
     int ntq = HAL_RCCEx_GetPeriphCLKFreq(RCC_PERIPHCLK_FDCAN) / f;
 #else
     // STM32H7 doesn't support yet HAL_RCCEx_GetPeriphCLKFreq for FDCAN
-    // Internal ST ticket 92465
-    int ntq = 10000000 / f;
+    PLL1_ClocksTypeDef pll1_clocks;
+    HAL_RCCEx_GetPLL1ClockFreq(&pll1_clocks);
+    int ntq = pll1_clocks.PLL1_Q_Frequency / f;
 #endif
 
     int nominalPrescaler = 1;
